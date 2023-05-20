@@ -89,8 +89,6 @@ const {user} = useContext(AuthContext);
                         <input type="text" name="quantity" placeholder="Available quantity" className="input input-bordered" />
                     </div>
                   
-                
-                   
                 </div>
                 <div>
                 <div className="form-control">

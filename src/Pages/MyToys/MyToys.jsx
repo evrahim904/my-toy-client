@@ -35,7 +35,7 @@ const MyToys = () => {
                         if (data.deletedCount > 0) {
                             Swal.fire(
                                 'Deleted!',
-                                'Your file has been deleted.',
+                                'Your toy car has been deleted.',
                                 'success'
                             )
                         }
@@ -49,24 +49,23 @@ const MyToys = () => {
 
     return (
         <div>
-            my toys is comming {addToys.length}
-
-
+             <h3 className="text-center text-5xl pb-4">My Car Collection</h3>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
                     {/* head */}
                     <thead>
                         <tr>
-                            <th>
-                                DELETE
-                            </th>
                             <th>Name</th>
                             <th>seller Name</th>
                             <th>category</th>
                             <th>Price</th>
                             <th>Rating</th>
                             <th>quantity</th>
-                            <th></th>
+                            <th>details</th>
+                            <th> Update</th>
+                            <th>
+                                DELETE
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
