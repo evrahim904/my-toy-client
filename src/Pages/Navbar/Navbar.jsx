@@ -1,6 +1,17 @@
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.jpg'
+import { useContext } from 'react';
+import { AuthContext } from '../../Providers/AuthProvider';
 const Navbar = () => {
+    const {user, logOut } = useContext(AuthContext)
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+
+            })
+            .catch(error => console.log(error))
+    }
     return (
         <div className="navbar bg-base-100">
             <div className="navbar-start">
@@ -23,10 +34,20 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal px-1 gap-5">
                     <Link to="/"> Home</Link>
                     <Link> All Toys</Link>
-                    <Link> My Toys</Link>
-                    <Link> Add A Toys</Link>
+                    
+                    <Link to="/addtoys"> Add A Toys</Link>
                     <Link> Blog</Link>
+                    
+                   {
+                    user?.email ? 
+                    <>
+                    <Link to="/mytoys"> My Toys</Link>
+                    <Link><button onClick={handleLogOut}>logout</button>
+                    </Link>
+                    </>
+                    :
                     <Link to="/login">login</Link>
+                   }
                 </ul>
             </div>
             <div className="navbar-end">
