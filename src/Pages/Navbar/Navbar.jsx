@@ -3,7 +3,7 @@ import logo from '../../assets/logo.jpg'
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
 const Navbar = () => {
-    const {user, logOut } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
 
     const handleLogOut = () => {
         logOut()
@@ -33,26 +33,35 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-5">
                     <Link to="/"> Home</Link>
-                    <Link> All Toys</Link>
-                    
-                    <Link to="/addtoys"> Add A Toys</Link>
+                  
                     <Link> Blog</Link>
-                    
-                   {
-                    user?.email ? 
-                    <>
-                    <Link to="/mytoys"> My Toys</Link>
-                    <Link><button onClick={handleLogOut}>logout</button>
-                    </Link>
-                    </>
-                    :
-                    <Link to="/login">login</Link>
-                   }
+                    <Link> All Toys</Link>
+                    {
+                        user?.email ?
+                            <>
+                                <Link to="/addtoys"> Add A Toy</Link>
+                                
+                                <Link to="/mytoys"> My Toys</Link>
+
+                            </>
+                            :
+                            ''
+                    }
                 </ul>
             </div>
-            <div className="navbar-end">
-                <a className="btn">Get started</a>
-            </div>
+            {user ?
+                <div className=" navbar-end" >
+
+                    <Link><button className='me-4 btn btn-info btn-sm' onClick={handleLogOut}>logout</button>
+                    </Link>
+                    <div className="avatar tooltip tooltip-bottom" data-tip={user.displayName}>
+                        <div className=" rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 w-10 " >
+                            <img  src={user.photoURL} />
+                        </div>
+                    </div>
+                </div>
+                : <Link className=" navbar-end" to="/login"><button className='btn btn-success '>Login</button></Link>
+            }
         </div>
     );
 };

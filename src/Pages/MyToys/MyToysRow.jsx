@@ -14,7 +14,7 @@ const MyToysRow = ({ toy, handleDelete }) => {
                     <div className="flex items-center space-x-3">
                         <div className="avatar">
                             <div className="rounded w-12 h-12">
-                                <img src={photo} alt="Avatar Tailwind CSS Component" />
+                          {photo && <img src={photo} alt="Avatar Tailwind CSS Component" />}
                             </div>
                         </div>
                         <div>
