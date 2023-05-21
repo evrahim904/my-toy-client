@@ -9,6 +9,7 @@ import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import UpdateCar from "../Pages/MyToys/UpdateCar";
 import AllToys from "../Pages/AllToys/AllToys";
 import ViewDetails from "../Pages/Details/ViewDetails";
+import SectionOne from "../Pages/Home/Section/SectionOne";
 
 const router = createBrowserRouter([
     {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
           element:<PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
           loader: ({params}) =>fetch(`http://localhost:5000/adding/${params.id}`)
           
+        },
+        {
+          path:"sectionOne",
+          element:<SectionOne></SectionOne>
         }
       ]
     },

@@ -34,7 +34,7 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal px-1 gap-5">
                     <Link to="/"> Home</Link>
                   
-                    <Link> Blog</Link>
+                    <Link to="sectionOne"> Blog</Link>
                     <Link to="/alltoys"> All Toys</Link>
                     {
                         user?.email ?
