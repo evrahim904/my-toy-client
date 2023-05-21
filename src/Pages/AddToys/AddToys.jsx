@@ -20,7 +20,7 @@ const {user} = useContext(AuthContext);
         const order = {name, photo,sellerName,email,category,price,Rating,quantity,details}
         console.log(order)
 
-        fetch('http://localhost:5000/adding',{
+        fetch('https://my-toys-server.vercel.app/adding',{
             method:'POST',
             headers:{
                   'content-type': 'application/json'

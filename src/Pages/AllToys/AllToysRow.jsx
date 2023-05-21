@@ -1,7 +1,27 @@
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const AllToysRow = ({allToy}) => {
     const { _id, name, price, sellerName, quantity, category,} = allToy;
+
+    const handleDetails = ()=>{
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+          }
+        })
+        
+        Toast.fire({
+          icon: 'warning',
+          title: 'You have to log in first to view details'
+        })
+      }
     return (
         <>
 
@@ -22,7 +42,7 @@ const AllToysRow = ({allToy}) => {
                 <td>{price}</td>
                 <td>{quantity}</td>
                 <td> <Link to={`/details/${_id}`}>
-                        <button className="btn btn-ghost btn-xs">View Details</button>
+                        <button onClick={handleDetails} className="btn btn-ghost btn-xs">View Details</button>
                     </Link></td>
                 <th>
                 </th>

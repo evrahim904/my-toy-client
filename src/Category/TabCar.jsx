@@ -1,7 +1,28 @@
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const TabCar = ({car}) => {
     const {_id,name,photo,price,Rating} = car;
+
+    
+    const handleDetails = ()=>{
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
+      
+      Toast.fire({
+        icon: 'warning',
+        title: 'You have to log in first to view details'
+      })
+    }
     return (
     
         <div className="card w-96 bg-base-100 shadow-xl">
@@ -13,7 +34,7 @@ const TabCar = ({car}) => {
         <p>Price: ${price}</p>
         <p>Rating: {Rating}</p>
           <div className="card-actions">
-            <Link to={`/details/${_id}`}><button className="btn btn-primary">View Details</button></Link>
+            <Link to={`/details/${_id}`}><button onClick={handleDetails} className="btn btn-primary">View Details</button></Link>
           </div>
         </div>
       </div>

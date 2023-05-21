@@ -13,7 +13,7 @@ const { _id, price, quantity,details } = toy;
         const UpdateCar = {price,quantity,details}
         console.log(UpdateCar)
 
-        fetch(`http://localhost:5000/adding/${_id}`,{
+        fetch(`https://my-toys-server.vercel.app/adding/${_id}`,{
             method:'PUT',
             headers:{
                   'content-type': 'application/json'

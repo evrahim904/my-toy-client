@@ -11,7 +11,7 @@ const CategoryTab = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/adding',)
+        fetch('https://my-toys-server.vercel.app/adding',)
             .then(res => res.json())
             .then(data => {
 
