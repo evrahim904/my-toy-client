@@ -9,7 +9,7 @@ import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import UpdateCar from "../Pages/MyToys/UpdateCar";
 import AllToys from "../Pages/AllToys/AllToys";
 import ViewDetails from "../Pages/Details/ViewDetails";
-import SectionOne from "../Pages/Home/Section/SectionOne";
+import Blog from "../Pages/Blog/Blog";
 
 const router = createBrowserRouter([
     {
@@ -54,9 +54,10 @@ const router = createBrowserRouter([
           
         },
         {
-          path:"sectionOne",
-          element:<SectionOne></SectionOne>
+          path:"/blog",
+          element:<Blog></Blog>
         }
+      
       ]
     },
   ]);

@@ -1,11 +1,11 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const Login = () => {
     const [error,setError] = useState()
     const {signIn,signInWithGoogle} = useContext(AuthContext)
-
+    const navigate = useNavigate()
     const handleLogin = event =>{
         event.preventDefault();
         event.preventDefault();
@@ -28,6 +28,8 @@ const Login = () => {
             const user = result.user;
             console.log(user)
             event.target.reset()
+        navigate('/')
+
         })
         .catch(error => console.log(error))
 

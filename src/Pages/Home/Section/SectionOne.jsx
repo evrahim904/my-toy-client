@@ -3,28 +3,50 @@ import section2 from '../../../assets/section2.jpg'
 import section3 from '../../../assets/section3.jpg'
 const SectionOne = () => {
     return (
-        <div className="carousel rounded-box">
-        <div className="carousel-item">
-          <img src={section1} alt="Burger" />
-        </div> 
-        <div className="carousel-item">
-          <img src={section2} alt="Burger" />
-        </div>  
-        <div className="carousel-item">
-          <img src={section3} alt="Burger" />
-        </div>  
-        <div className="carousel-item">
-          <img src="/images/stock/photo-1494253109108-2e30c049369b.jpg" alt="Burger" />
-        </div> 
-        <div className="carousel-item">
-          <img src="/images/stock/photo-1550258987-190a2d41a8ba.jpg" alt="Burger" />
-        </div> 
-        <div className="carousel-item">
-          <img src="/images/stock/photo-1559181567-c3190ca9959b.jpg" alt="Burger" />
-        </div> 
-        <div className="carousel-item">
-          <img src="/images/stock/photo-1601004890684-d8cbf643f5f2.jpg" alt="Burger" />
-        </div>
+        
+      <div>
+        <h2 className='text-center text-5xl mb-2 mt-4 text-indigo-600'>Some suggested Toy</h2>
+         <div className='grid grid-cols-1 md:grid-cols-3'>
+        <div className="card w-96 bg-base-100 shadow-xl">
+  <figure className="px-10 pt-10">
+    <img src={section1}alt="Shoes" className="rounded-xl" />
+  </figure>
+  <div className="card-body items-center text-center">
+    <h2 className="card-title">doll</h2>
+    <p> price: $200</p>
+    <div className="card-actions">
+      <button className="btn btn-primary">Buy Now</button>
+    </div>
+  </div>
+  
+</div>
+<div className="card w-96 bg-base-100 shadow-xl">
+  <figure className="px-10 pt-10">
+    <img src={section2} alt="Shoes" className="rounded-xl" />
+  </figure>
+  <div className="card-body items-center text-center">
+  <h2 className="card-title">smile toy</h2>
+    <p> price: $500</p>
+    <div className="card-actions">
+      <button className="btn btn-primary">Buy Now</button>
+    </div>
+  </div>
+  
+</div>
+<div className="card w-96 bg-base-100 shadow-xl">
+  <figure className="px-10 pt-10">
+    <img src={section3}alt="Shoes" className="rounded-xl" />
+  </figure>
+  <div className="card-body items-center text-center">
+  <h2 className="card-title">dragon</h2>
+    <p> price: $300</p>
+    <div className="card-actions">
+      <button className="btn btn-primary">Buy Now</button>
+    </div>
+  </div>
+  
+</div>
+       </div>
       </div>
     );
 };
