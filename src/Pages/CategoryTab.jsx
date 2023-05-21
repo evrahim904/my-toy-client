@@ -1,29 +1,78 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import {useEffect, useState } from 'react';
+import TabCar from '../Category/TabCar';
 
 const CategoryTab = () => {
+    const [cars, setCars] = useState([])
+    const [sportsCar, setSportsCar] = useState([]);
+    const [activeTab, setActiveTab] = useState("sports")
+
+
+
+    useEffect(() => {
+        fetch('http://localhost:5000/adding',)
+            .then(res => res.json())
+            .then(data => {
+
+                setCars(data)
+
+            })
+    }, [])
+
+    useEffect(() => {
+        const result = cars?.filter((car) => car.category == activeTab)
+        setSportsCar(result)
+    }, [cars, activeTab])
+    console.log(sportsCar)
+
+
+    const handleTabClick = (tabName) => {
+        setActiveTab(tabName)
+    }
     return (
         <div className='text-center'>
             <Tabs>
                 Toy car
                 <hr />
                 <TabList>
-                    <Tab>Title 1</Tab>
-                    <Tab>Title 2</Tab>
-                    <Tab>Title 3</Tab>
+                    <Tab onClick={() => handleTabClick("sports car")}>sports car</Tab>
+                    <Tab onClick={() => handleTabClick("truck")}>truck</Tab>
+                    <Tab onClick={() => handleTabClick("police car")}> mini police car</Tab>
                 </TabList>
 
                 <TabPanel>
-                    <h2>Any content 1</h2>
-                    <h2>Any content 1</h2>
+                   <div className='grid grid-cols-1 md:grid-cols-2'>
+                   {
+                        sportsCar.map(car => <TabCar
+                        
+                        key={car._id}
+                        car={car}
+                        ></TabCar>)
+                    }
+                   </div>
                 </TabPanel>
                 <TabPanel>
-                    <h2>Any content 2</h2>
-                    <h2>Any content 2</h2>
+                <div className='grid grid-cols-1 md:grid-cols-2'>
+                   {
+                        sportsCar.map(car => <TabCar
+                        
+                        key={car._id}
+                        car={car}
+                        ></TabCar>)
+                    }
+                   </div>
                 </TabPanel>
                 <TabPanel>
-                    <h2>Any content 3</h2>
-                    <h2>Any content 3</h2>
+                <div className='grid grid-cols-1 md:grid-cols-2'>
+                   {
+                        sportsCar.map(car => <TabCar
+                        
+                        key={car._id}
+                        car={car}
+                        ></TabCar>)
+                    }
+                   </div>
                 </TabPanel>
             </Tabs>
         </div>

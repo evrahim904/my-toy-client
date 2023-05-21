@@ -7,7 +7,7 @@ const MyToys = () => {
     const [addToys, setAddToys] = useState([])
     const { user } = useContext(AuthContext)
     const url = `http://localhost:5000/adding?email=${user?.email}`;
-    useEffect(() => {
+    useEffect(() =>{
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -49,7 +49,7 @@ const MyToys = () => {
 
     return (
         <div>
-             <h3 className="text-center text-5xl pb-4">My Car Collection</h3>
+             <h3 className="text-center text-5xl pb-4">My Toy Car Collection</h3>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
                     {/* head */}

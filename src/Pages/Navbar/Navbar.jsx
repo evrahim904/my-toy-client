@@ -35,7 +35,7 @@ const Navbar = () => {
                     <Link to="/"> Home</Link>
                   
                     <Link> Blog</Link>
-                    <Link> All Toys</Link>
+                    <Link to="/alltoys"> All Toys</Link>
                     {
                         user?.email ?
                             <>

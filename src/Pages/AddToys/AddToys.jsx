@@ -74,9 +74,9 @@ const {user} = useContext(AuthContext);
                             <span className="label-text">category</span>
                         </label>
                         <select name="category" id="">
-                            <option className="input input-bordered" value="car">car </option>
-                            <option className="input input-bordered" value="track">track</option>
-                            <option className="input input-bordered" value="bus">hey</option>
+                            <option className="input input-bordered" value="sports car">sports car </option>
+                            <option className="input input-bordered" value="truck"> truck</option>
+                            <option className="input input-bordered" value="police car">police car</option>
                         </select>
                     </div>
                     <div className="form-control">
