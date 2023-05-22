@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../Providers/AuthProvider";
 
 const TabCar = ({car}) => {
+  const {user} = useContext(AuthContext)
     const {_id,name,photo,price,Rating} = car;
 
     
@@ -34,7 +37,13 @@ const TabCar = ({car}) => {
         <p>Price: ${price}</p>
         <p>Rating: {Rating}</p>
           <div className="card-actions">
-            <Link to={`/details/${_id}`}><button onClick={handleDetails} className="btn btn-primary">View Details</button></Link>
+            {user?
+            
+            <Link to={`/details/${_id}`}><button className="btn btn-primary">View Details</button></Link>:
+
+            
+             <Link to={`/details/${_id}`}><button  onClick={handleDetails} className="btn btn-primary">View Details</button></Link>
+            }
           </div>
         </div>
       </div>

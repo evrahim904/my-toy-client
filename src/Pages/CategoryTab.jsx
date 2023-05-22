@@ -1,17 +1,20 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import {useEffect, useState } from 'react';
+import {useEffect,  useState } from 'react';
 import TabCar from '../Category/TabCar';
+
+
+
+
+
 
 const CategoryTab = () => {
     const [cars, setCars] = useState([])
     const [sportsCar, setSportsCar] = useState([]);
     const [activeTab, setActiveTab] = useState("sports")
-
-
-
+    
     useEffect(() => {
-        fetch('https://my-toys-server.vercel.app/adding',)
+        fetch('https://my-toys-server.vercel.app/adding')
             .then(res => res.json())
             .then(data => {
 
@@ -24,9 +27,8 @@ const CategoryTab = () => {
         const result = cars?.filter((car) => car.category == activeTab)
         setSportsCar(result)
     }, [cars, activeTab])
-    console.log(sportsCar)
 
-
+   
     const handleTabClick = (tabName) => {
         setActiveTab(tabName)
     }
@@ -51,6 +53,7 @@ const CategoryTab = () => {
                         ></TabCar>)
                     }
                    </div>
+                   
                 </TabPanel>
                 <TabPanel>
                 <div className='grid grid-cols-1 md:grid-cols-2'>
