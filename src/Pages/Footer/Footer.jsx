@@ -1,4 +1,4 @@
-import React from "react";
+
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import logo from "../../assets/logo.jpg";
 
@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="text-sm">
             <p>Contact Information:</p>
             <p>Email: toycar@gmail.com</p>
-            <p>Phone: +1234567890</p>
+            <p>Phone: +8801904678904</p>
           </div>
           <div className="text-sm">
             <p>Follow Us:</p>
