@@ -1,8 +1,9 @@
 
 import { FaTruck, FaClock, FaMapMarkerAlt } from "react-icons/fa";
 import img from '../../../assets/image.jpg'
+
 const SectionTwo = () => {
-  
+    
     return (
         <section className="delivery-section text-primary mt-3 mb-6">
      <h2 className="text-3xl text-center">Our delivery services</h2>

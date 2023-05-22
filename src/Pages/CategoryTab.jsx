@@ -3,11 +3,6 @@ import 'react-tabs/style/react-tabs.css';
 import {useEffect,  useState } from 'react';
 import TabCar from '../Category/TabCar';
 
-
-
-
-
-
 const CategoryTab = () => {
     const [cars, setCars] = useState([])
     const [sportsCar, setSportsCar] = useState([]);
