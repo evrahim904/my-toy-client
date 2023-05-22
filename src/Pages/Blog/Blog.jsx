@@ -17,7 +17,7 @@ const Blog = () => {
            <div  className="bg-blue-600 mb-6">
            <h2 className="text-2xl">What is express js? What is Nest JS ?
             </h2>
-            <p>answer: NestJS provides a more structured and opinionated approach, which can make it easier to build complex APIs with proper separation of concerns. Express, on the other hand, is more lightweight and flexible, which makes it a popular choice for simple or small-scale APIs.</p>
+            <p>answer: NestJS provides a more structured and opinionated approach, which can make it easier to build complex APIs with proper separation of concerns. Express, on the other hand, is more lightweight and it's flexible, which makes it a popular choice for simple or small-scale APIs.</p>
            </div>
             <div  className="bg-blue-600 mb-36">
             <h2>What is MongoDB aggregate and how does it work?</h2>
