@@ -4,7 +4,7 @@ const Blog = () => {
         <div>
             <div className="bg-blue-600 mb-6">
                 <h2 className="text-2xl">What is an access token and refresh token? How do they work and where should we store them on the client-side?</h2>
-                <p>answer: Access token and refresh token shouldn't be stored in the local/session storage, because they are not a place for any sensitive data. Hence I would store the access token in a httpOnly cookie (even though there is CSRF) and I need it for most of my requests to the Resource Server anyway.
+                <p>answer: Access token and refresh token should not be stored in the local/session storage, because they are not a place for any sensitive data. Hence I would store the access token in a httpOnly cookie (even though there is CSRF) and I need it for most of my requests to the Resource Server anyway.
 
                     But what about the refresh token? I cannot store it in a cookie, because (1) it would be send with every request to my Resource Server as well which makes it vulnerable to CSRF too and (2) it would send expose both access/refresh token with an identical attack vector.</p>
             </div>
@@ -17,7 +17,7 @@ const Blog = () => {
            <div  className="bg-blue-600 mb-6">
            <h2 className="text-2xl">What is express js? What is Nest JS ?
             </h2>
-            <p>answer: NestJS provides a more structured and opinionated approach, which can make it easier to build complex APIs with proper separation of concerns. Express, on the other hand, is more lightweight and it's flexible, which makes it a popular choice for simple or small-scale APIs.</p>
+            <p>answer: NestJS provides a more structured and opinionated approach, which can make it easier to build complex APIs with proper separation of concerns. Express, on the other hand, is more lightweight and flexible, which makes it a popular choice for simple or small-scale APIs.</p>
            </div>
             <div  className="bg-blue-600 mb-36">
             <h2>What is MongoDB aggregate and how does it work?</h2>
