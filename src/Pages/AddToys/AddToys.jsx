@@ -38,6 +38,7 @@ const {user} = useContext(AuthContext);
                     showConfirmButton: false,
                     timer: 1000
                   })
+                  event.target.reset()
             }
         })
     }

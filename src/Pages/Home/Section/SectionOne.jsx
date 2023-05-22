@@ -14,7 +14,7 @@ const SectionOne = () => {
   useEffect(()=>{
     AOS.init(
      {
-      duration:2000
+      duration:1000
      }
     )
   },[])
@@ -22,7 +22,7 @@ const SectionOne = () => {
     <div>
       <h2 className='text-center text-3xl  mt-6 text-indigo-600'>What do customers buy after viewing this item?</h2>
       <div className='grid grid-cols-1 md:grid-cols-3'>
-        <div className="card w-96 bg-base-100 shadow-xl " data-aos="fade-left">
+        <div className="card w-96 bg-base-100 shadow-xl " data-aos="fade-right">
           <figure className="px-10 pt-10">
             <img src={section1} alt="Shoes" className="rounded-xl" />
           </figure>
@@ -35,7 +35,7 @@ const SectionOne = () => {
           </div>
 
         </div>
-        <div className="card w-96 bg-base-100 shadow-xl" data-aos="fade-left">
+        <div className="card w-96 bg-base-100 shadow-xl" data-aos="fade-right">
           <figure className="px-10 pt-10">
             <img src={section2} alt="Shoes" className="rounded-xl" />
           </figure>
@@ -48,7 +48,7 @@ const SectionOne = () => {
           </div>
 
         </div>
-        <div className="card w-96 bg-base-100 shadow-xl" data-aos="fade-left">
+        <div className="card w-96 bg-base-100 shadow-xl" data-aos="fade-right">
           <figure className="px-10 pt-10">
             <img src={section3} alt="Shoes" className="rounded-xl" />
           </figure>
