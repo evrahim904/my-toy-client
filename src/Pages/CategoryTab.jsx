@@ -11,8 +11,9 @@ import TabCar from '../Category/TabCar';
 const CategoryTab = () => {
     const [cars, setCars] = useState([])
     const [sportsCar, setSportsCar] = useState([]);
-    const [activeTab, setActiveTab] = useState("sports")
+    const [activeTab, setActiveTab] = useState("sports car")
     
+    console.log(sportsCar)
     useEffect(() => {
         fetch('https://my-toys-server.vercel.app/adding')
             .then(res => res.json())
@@ -38,7 +39,9 @@ const CategoryTab = () => {
                <h1 className='text-4xl text-violet-700 mb-3'> Toy car</h1>
                 <hr />
                 <TabList>
-                    <Tab onClick={() => handleTabClick("sports car")}>sports car</Tab>
+                    <Tab onClick={() => handleTabClick("sports car")}>sports car
+                   {/* <img className='w-20 h-20' src={sportsCar[0].photo} alt="" /> */}
+                    </Tab>
                     <Tab onClick={() => handleTabClick("truck")}>truck</Tab>
                     <Tab onClick={() => handleTabClick("police car")}> mini police car</Tab>
                 </TabList>
