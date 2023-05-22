@@ -81,6 +81,7 @@ const CategoryTab = () => {
                    </div>
                 </TabPanel>
             </Tabs>
+            <hr />
         </div>
     );
 };

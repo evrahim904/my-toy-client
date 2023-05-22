@@ -2,8 +2,8 @@
 import CategoryTab from '../CategoryTab';
 import Banner from './Banner';
 import Gallery from './Section/Gallery';
-import HomePage from './Section/HomePage';
 import SectionOne from './Section/SectionOne';
+import SectionTwo from './Section/SectionTwo';
 
 const Home = () => {
     
@@ -13,6 +13,7 @@ const Home = () => {
             <Gallery></Gallery>
             <CategoryTab></CategoryTab>
             <SectionOne></SectionOne>
+            <SectionTwo></SectionTwo>
         </div>
     );
 };
