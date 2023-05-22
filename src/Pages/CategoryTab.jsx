@@ -35,7 +35,7 @@ const CategoryTab = () => {
     return (
         <div className='text-center'>
             <Tabs>
-                Toy car
+               <h1 className='text-4xl text-violet-700 mb-3'> Toy car</h1>
                 <hr />
                 <TabList>
                     <Tab onClick={() => handleTabClick("sports car")}>sports car</Tab>
